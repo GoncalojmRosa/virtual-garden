@@ -4,9 +4,12 @@ export function BentoCard({
   content,
 }: Readonly<{ name: string; description: string; content: React.ReactNode }>) {
   return (
-    <div className="rounded-xl border-2 border-slate-400/10 bg-neutral-100 p-4">
-      <h1>{name}</h1>
-      <p>{description}</p>
+    <div className="p-4 h-full overflow-y-auto">
+      <div className="flex items-center justify-center flex-col">
+        <h1>{name}</h1>
+        <span>{description}</span>
+      </div>
+
       {content}
     </div>
   );
