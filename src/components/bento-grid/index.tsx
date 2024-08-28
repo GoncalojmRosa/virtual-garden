@@ -17,7 +17,7 @@ export function BentoGrid({
                 : i === 1
                 ? "col-span-1 row-span-3"
                 : i === 2
-                ? "col-span-1"
+                ? "col-span-2"
                 : ""
             }`}
           >

@@ -9,7 +9,6 @@ export function BentoCard({
         <h1>{name}</h1>
         <span>{description}</span>
       </div>
-
       {content}
     </div>
   );
