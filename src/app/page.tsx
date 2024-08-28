@@ -1,6 +1,7 @@
 import { BentoGrid } from "@/components/bento-grid";
 import { Check, Package, PackageOpen, Trash2 } from "lucide-react";
 import Navbar from "./../components/navbar/index";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const features: Features[] = [
   {
@@ -72,9 +73,11 @@ const features: Features[] = [
 
 export default function Home() {
   return (
-    <main className="mx-auto min-h-screen px-24">
-      <Navbar />
-      <BentoGrid features={features} />
-    </main>
+    <ClerkProvider>
+      <main className="mx-auto min-h-screen px-24">
+        <Navbar />
+        <BentoGrid features={features} />
+      </main>
+    </ClerkProvider>
   );
 }
