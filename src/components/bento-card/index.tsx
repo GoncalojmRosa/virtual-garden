@@ -1,15 +1,15 @@
 export function BentoCard({
   name,
-  description,
   content,
-}: Readonly<{ name: string; description: string; content: React.ReactNode }>) {
+}: Readonly<{ name: string; content: React.ReactNode }>) {
   return (
-    <div className="p-4 h-full overflow-y-auto">
-      <div className="flex items-center justify-center flex-col">
-        <h1>{name}</h1>
-        <span>{description}</span>
+    <div className="h-full">
+      <div className="flex items-center justify-center flex-col m-3">
+        <h1 className="text-2xl font-medium">{name}</h1>
       </div>
-      {content}
+      <div className="h-full p-4 overflow-y-auto border-slate-400/10 bg-neutral-100 rounded-xl border-2">
+        {content}
+      </div>
     </div>
   );
 }

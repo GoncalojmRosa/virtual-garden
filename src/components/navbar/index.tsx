@@ -1,6 +1,6 @@
-import { SignedOut, SignInButton, SignedIn, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
-export default function Navbar() {
+export default async function Navbar() {
   return (
     <nav className="p-4">
       <div className="flex items-center justify-between">

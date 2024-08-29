@@ -3,7 +3,7 @@ import { BentoCard } from "./../bento-card/index";
 export function BentoGrid({
   features,
 }: Readonly<{
-  features: { name: string; description: string; content: React.ReactNode }[];
+  features: { name: string; content: React.ReactNode }[];
 }>) {
   return (
     <div className="flex h-[90vh] justify-center flex-col">
@@ -11,14 +11,14 @@ export function BentoGrid({
         {features.map((feature, i) => (
           <div
             key={i}
-            className={`rounded-xl border-2 border-slate-400/10 bg-neutral-100 ${
+            className={`${
               i === 0
-                ? "col-span-3 row-span-2"
+                ? "col-span-3 row-span-2 "
                 : i === 1
                 ? "col-span-1 row-span-3"
                 : i === 2
-                ? "col-span-2"
-                : ""
+                ? "col-span-2 mt-9"
+                : "mt-9"
             }`}
           >
             <BentoCard key={i} {...feature} />
